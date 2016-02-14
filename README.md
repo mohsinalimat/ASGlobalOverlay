@@ -2,9 +2,17 @@
 
 ### A modern pop-over controller that's easy to implement.
 
+![Pod Platform](https://img.shields.io/cocoapods/p/ASGlobalOverlay.svg?style=flat)
+![Pod Version](https://img.shields.io/cocoapods/v/ASGlobalOverlay.svg?style=flat)
+![Pod License](https://img.shields.io/cocoapods/l/ASGlobalOverlay.svg?style=flat)
+
 ## Description
 
 ASGlobalOverlay is a pop-over controller that can display alerts, slide-up menus, and is-working indicators on top of your app. It features a modern interface and easy implementation.
+
+## Images
+
+![alt tag](http://imgur.com/pxD75ds)
 
 ## About
 
