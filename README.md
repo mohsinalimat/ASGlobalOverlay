@@ -1,35 +1,25 @@
 # ASGlobalOverlay
 
-### A modern pop-over controller that's easy to implement.
-
-![Pod Platform](https://img.shields.io/cocoapods/p/ASGlobalOverlay.svg?style=flat)
 ![Pod Version](https://img.shields.io/cocoapods/v/ASGlobalOverlay.svg?style=flat)
+![Pod Platform](https://img.shields.io/cocoapods/p/ASGlobalOverlay.svg?style=flat)
 ![Pod License](https://img.shields.io/cocoapods/l/ASGlobalOverlay.svg?style=flat)
 
-## Description
-
-ASGlobalOverlay is a pop-over controller that can display alerts, slide-up menus, and is-working indicators on top of your app. It features a modern interface and easy implementation.
-
-## Screenshot
-
-[GIF Preview](http://i.imgur.com/pxD75ds.gifv)
+ASGlobalOverlay is a singleton pop-over controller that can display alerts, slide-up menus, and is-working indicators on top of your app. It's easy to implement and features a modern look and feel.
 
 ![alt tag](http://i.imgur.com/6WpSPFS.png)
 
-## About
+## Demo
 
-ASGlobalOverlay started off as part of a specific project. Unable to configure UIAlertController to match the modern look and feel of the project, I decided to make a custom replacement. Now, I'm open sourcing the project as ASGlobalOverlay.
+View a [GIF](http://i.imgur.com/pxD75ds.gifv) of the demo app, or try it out yourself by running `pod try ASGlobalOverlay`.
 
-That said, this is just the first pass. There is a lot of work to be done to make it a great library. I have a set of planned features listed below, and I'm interested in getting feedback on what developers would like to see.
-
-## Installation
+## Installation & Setup
 
 Install using [CocoaPods](http://cocoapods.org):
 
 ````ruby
 pod 'ASGlobalOverlay'
 ````
-Setup in app delegate:
+Call the setup helper from your app delegate:
 
 ```objective-c
 #import <ASGlobalOverlay/ASGlobalOverlay.h>
@@ -44,13 +34,9 @@ Setup in app delegate:
 
 That's it! You're up and running.
 
-## Usage
+## Quick Start
 
-_Be sure to check out the example app! It has a bunch of examples and helpful inline notes!_
-
-_Also checkout the `ASGlobalOverlay` header and the `ASUserOption` header for helpful documentation._
-
-If you just need a quick start, here are some basic usage examples to reference:
+Typical use of `ASGlobalOverlay` looks something like this:
 
 ```objective-c
 
@@ -73,34 +59,43 @@ If you just need a quick start, here are some basic usage examples to reference:
 - (void)showWorkingIndicator{
 
     [ASGlobalOverlay showWorkingIndicatorWithDescription:@"Loading"];
-}
 
-- (void)dismissAlert{
-
-    [ASGlobalOverlay dismissAlert];
-}
-
-- (void)dismissSlideUpMenu{
-
-    [ASGlobalOverlay dismissSlideUpMenu];
-}
-
-- (void)dismissWorkingIndicator{
-
-    [ASGlobalOverlay dismissWorkingIndicator];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    
+        // some background task
+        dispatch_async(dispatch_get_main_queue(), ^{
+        
+            [ASGlobalOverlay dismissWorkingIndicator];
+        });
+    });
 }
 
 ```
+Check out the `ASGlobalOverlay` header and the `ASUserOption` header for additional info.
 
-Note: If you would like to smoothly transition between a visible popover and a new popover, simply call the show method for the new popover. `ASGlobalOverlay` will smoothly transition the first popover out. You can also do this from inside an `actionBlock`.
+Please read the following section for important implementation details.
 
-## Behavior & Implementation Notes
+## Usage & Behavior Notes
+
+- If you would like to smoothly transition between the visible popover and a new popover, simply call the show method for the new popover. `ASGlobalOverlay` will smoothly transition the first popover out. You can also do this from inside an `actionBlock`.
 
 - ASGlobalOverlay will not appear over (or disable) a keyboard. It is recommended that you dismiss the keyboard before showing something with ASGlobalOverlay. Check out the example app for details.
 
 - ASGlobalOverlay methods that show or dismiss views should only be called on the main thread.
 
-- It is not recommended that you use ASGlobalOverlay and SVProgressHUD together (see 'Acknowledgements' below for details).
+- It is not recommended that you use ASGlobalOverlay and SVProgressHUD together (see 'Credits' below for details).
+
+## About
+
+ASGlobalOverlay started off as part of a specific project. It was created to accomplish two goals:
+
+1) Provide a consistent way to show pop-overs to the user.
+
+2) Provide a visually modern alternative to UIAlertController (which offers limited customizability, and [can't be subclassed](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAlertController_class/index.html#//apple_ref/doc/uid/TP40014538-CH1-SW2)).
+ 
+Knowing that it may be useful in other apps, I made it into a CocoaPod.
+ 
+1.0.0 is just a first-pass. I have a set of planned features listed below, and I'm interested in getting feedback on what else developers would like to see.
 
 ## Planned Features
 
@@ -117,17 +112,14 @@ Note: If you would like to smoothly transition between a visible popover and a n
 - iOS 8.0+
 - ARC
 
-## Author
-
-Amit Sharma
-amitsharma@mac.com
-
 ## License
 
 ASGlobalOverlay is available under the MIT license. See the LICENSE file for more info.
 
-## Acknowledgements
+## Credit
 
-ASGlobalOverlay was inspired by [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD). Furthermore, the high-level architecture of this library (and one specific method) is largely based on the SVProgressHUD code. The SVProgressHUD contributors have put together a great library, and deserve major kudos for their work.
+`ASGlobalOverlay` is written and maintained by [Amit Sharma](https://github.com/asharma-atx).
 
-Since ASGlobalOverlay and SVProgressHUD both utilize the same code to position themselves in the view hierarchy, it is not recommended that you use them together.
+The high-level architecture of `ASGlobalOverlay` (and one specific method) is largely based on the the [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD) code. SVProgressHUD is a fantastic library, and its developers deserve major kudos for their work.
+
+Since ASGlobalOverlay and SVProgressHUD utilize similar code to position themselves in the view hierarchy, it is not recommended that you use them together.
