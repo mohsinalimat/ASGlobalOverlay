@@ -10,9 +10,11 @@
 
 ASGlobalOverlay is a pop-over controller that can display alerts, slide-up menus, and is-working indicators on top of your app. It features a modern interface and easy implementation.
 
-## Images
+## Screenshot
 
-![alt tag](http://imgur.com/pxD75ds)
+[GIF Preview](http://i.imgur.com/pxD75ds.gifv)
+
+![alt tag](http://i.imgur.com/6WpSPFS.png)
 
 ## About
 

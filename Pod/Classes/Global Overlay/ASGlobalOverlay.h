@@ -48,7 +48,7 @@
  * ## Learn More
  *
  * Please reference the README on GitHub for additional detail.
- * URL GOES HERE
+ * https://github.com/asharma-atx/ASGlobalOverlay
  *
  * ## Acknowledgements
  *

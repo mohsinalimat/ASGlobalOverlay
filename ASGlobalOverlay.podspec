@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = "https://github.com/asharma-atx/ASGlobalOverlay"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2" will plug in once uploaded
+  s.screenshots      = "http://i.imgur.com/Bo3aoU3.png", "http://i.imgur.com/TqTyVHz.png", "http://i.imgur.com/WSEa62x.png"
   s.license          = 'MIT'
   s.author           = { "Amit Sharma" => "amitsharma@mac.com" }
   s.source           = { :git => "https://github.com/asharma-atx/ASGlobalOverlay.git", :tag => s.version.to_s }
