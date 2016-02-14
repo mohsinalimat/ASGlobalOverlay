@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '8.0'
+
+target 'ASGlobalOverlay_Example' do
+  pod 'ASGlobalOverlay', :path => '../'
+end
+
+target 'ASGlobalOverlay_Tests' do
+  pod 'ASGlobalOverlay', :path => '../'
+end

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10089" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ocl-Yg-qYD">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10072.1"/>
+    </dependencies>
+    <scenes>
+        <!--Example Controller-->
+        <scene sceneID="fnL-sg-Aaf">
+            <objects>
+                <viewController id="Ocl-Yg-qYD" customClass="ASExampleController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ptR-Ft-Gz8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ily-eZ-Kyk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S8U-Bl-X5W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seattle_city.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xgQ-P5-gRY">
+                                <rect key="frame" x="0.0" y="-1" width="415" height="737"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCC-gg-3VG">
+                                <rect key="frame" x="10" y="174" width="211" height="30"/>
+                                <state key="normal" title="Show Alert (Multi-line Options)">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlertMultiLineOptions:" destination="Ocl-Yg-qYD" eventType="touchUpInside" id="EJt-IQ-EgS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUo-Eb-gsE">
+                                <rect key="frame" x="10" y="342" width="237" height="30"/>
+                                <state key="normal" title="Show Working Indicator w/ Prompt">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showWorkingIndicatorWithPrompt:" destination="Ocl-Yg-qYD" eventType="touchUpInside" id="q8O-1x-pzC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0V-kM-gt2">
+                                <rect key="frame" x="10" y="426" width="182" height="30"/>
+                                <state key="normal" title="Slide Up + Working + Alert">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSlideUpMenuThenWorkingIndicatorThenAlert:" destination="Ocl-Yg-qYD" eventType="touchUpInside" id="JmC-ff-PXH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Combinations:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3t-v3-sjM">
+                                <rect key="frame" x="10" y="372" width="134" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwS-8i-YcF">
+                                <rect key="frame" x="10" y="396" width="107" height="30"/>
+                                <state key="normal" title="Working + Alert">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="workingIndicatorThenAlert:" destination="Ocl-Yg-qYD" eventType="touchUpInside" id="8Vp-BW-0UE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdR-Wq-29y">
+                                <rect key="frame" x="10" y="228" width="145" height="30"/>
+                                <state key="normal" title="Show Slide-Up Menu">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSlideUpMenu:" destination="Ocl-Yg-qYD" eventType="touchUpInside" id="IgR-Z7-RZS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRF-Qm-Dsg">
+                                <rect key="frame" x="10" y="144" width="216" height="30"/>
+                                <state key="normal" title="Show Alert (Two Small Options)">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlertTwoOptionsSmall:" destination="Ocl-Yg-qYD" eventType="touchUpInside" id="G79-VK-yzA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert View:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vH3-xw-jbv">
+                                <rect key="frame" x="10" y="30" width="99.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYW-vV-fQ3">
+                                <rect key="frame" x="10" y="114" width="168" height="30"/>
+                                <state key="normal" title="Show Alert (One Option)">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlertOneOptions:" destination="Ocl-Yg-qYD" eventType="touchUpInside" id="9U4-qz-rAf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bC-8U-FwC">
+                                <rect key="frame" x="10" y="258" width="297" height="30"/>
+                                <state key="normal" title="Show Slide-Up Menu w/ Destructive Option">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSlideUpMenuWithDestructiveOption:" destination="Ocl-Yg-qYD" eventType="touchUpInside" id="2Ij-C7-esD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WW8-6J-npK">
+                                <rect key="frame" x="10" y="84" width="236" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="uQh-TX-dZi"/>
+                                </constraints>
+                                <state key="normal" title="Show Alert (Message, No Options)">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlertNoOptions:" destination="Ocl-Yg-qYD" eventType="touchUpInside" id="CfP-aZ-AgM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVj-xr-hFj">
+                                <rect key="frame" x="10" y="54" width="260" height="30"/>
+                                <state key="normal" title="Show Alert (No Message, No Options)">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlertNoMessageOrOptions:" destination="Ocl-Yg-qYD" eventType="touchUpInside" id="NrZ-Ty-dKk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Working Indicator:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHK-gZ-yY2">
+                                <rect key="frame" x="10" y="288" width="168" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqi-bn-tjI">
+                                <rect key="frame" x="10" y="312" width="163" height="30"/>
+                                <state key="normal" title="Show Working Indicator">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showWorkingIndicator:" destination="Ocl-Yg-qYD" eventType="touchUpInside" id="sHC-RV-taX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slide-Up Menu:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9S1-ci-wIr">
+                                <rect key="frame" x="10" y="204" width="144" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="use to experiment w/ keyboard-handling behavior" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ga-mq-YIV">
+                                <rect key="frame" x="10" y="466" width="394" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0ra-Xi-Ww8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ocl-Yg-qYD" id="d3F-vF-cat"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="auto-dismiss keyboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWd-qR-Nzf">
+                                <rect key="frame" x="10" y="516" width="175" height="21"/>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D1r-MV-mGr">
+                                <rect key="frame" x="198" y="511" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleSwitch:" destination="Ocl-Yg-qYD" eventType="valueChanged" id="FlA-EG-Y5p"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9S1-ci-wIr" firstAttribute="top" secondItem="jCC-gg-3VG" secondAttribute="bottom" id="0sk-3N-TPp"/>
+                            <constraint firstItem="zUo-Eb-gsE" firstAttribute="top" secondItem="uqi-bn-tjI" secondAttribute="bottom" id="3Yo-rG-Kps"/>
+                            <constraint firstItem="jCC-gg-3VG" firstAttribute="top" secondItem="kRF-Qm-Dsg" secondAttribute="bottom" id="3f6-DA-s9v"/>
+                            <constraint firstItem="7bC-8U-FwC" firstAttribute="top" secondItem="RdR-Wq-29y" secondAttribute="bottom" id="9oy-Np-Gg7"/>
+                            <constraint firstItem="GHK-gZ-yY2" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="B8j-ou-Zv9"/>
+                            <constraint firstItem="kRF-Qm-Dsg" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="CrO-yj-H4K"/>
+                            <constraint firstItem="WW8-6J-npK" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="GKy-yf-VHA"/>
+                            <constraint firstItem="OVj-xr-hFj" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="Ght-aa-lWQ"/>
+                            <constraint firstAttribute="trailing" secondItem="1ga-mq-YIV" secondAttribute="trailing" constant="10" id="H6b-E7-aK4"/>
+                            <constraint firstItem="RdR-Wq-29y" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="HVb-2l-DFs"/>
+                            <constraint firstItem="xgQ-P5-gRY" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" id="HZA-8F-LTL"/>
+                            <constraint firstItem="uqi-bn-tjI" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="Hp9-gr-24i"/>
+                            <constraint firstItem="V3t-v3-sjM" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="KLc-b6-67V"/>
+                            <constraint firstItem="Ily-eZ-Kyk" firstAttribute="top" secondItem="xgQ-P5-gRY" secondAttribute="bottom" id="NzZ-mj-axC"/>
+                            <constraint firstItem="o0V-kM-gt2" firstAttribute="top" secondItem="gwS-8i-YcF" secondAttribute="bottom" id="Psc-in-T7h"/>
+                            <constraint firstItem="7bC-8U-FwC" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="RgI-76-gc7"/>
+                            <constraint firstItem="1ga-mq-YIV" firstAttribute="top" secondItem="o0V-kM-gt2" secondAttribute="bottom" constant="10" id="ST5-9C-BT5"/>
+                            <constraint firstItem="nYW-vV-fQ3" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="TGk-Q1-ish"/>
+                            <constraint firstItem="o0V-kM-gt2" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="TSv-er-ENR"/>
+                            <constraint firstItem="V3t-v3-sjM" firstAttribute="top" secondItem="zUo-Eb-gsE" secondAttribute="bottom" id="UX6-bl-4Ze"/>
+                            <constraint firstAttribute="trailing" secondItem="xgQ-P5-gRY" secondAttribute="trailing" constant="-1" id="UhO-dG-vEz"/>
+                            <constraint firstItem="GHK-gZ-yY2" firstAttribute="top" secondItem="7bC-8U-FwC" secondAttribute="bottom" id="UoN-4q-3kM"/>
+                            <constraint firstItem="WWd-qR-Nzf" firstAttribute="top" secondItem="1ga-mq-YIV" secondAttribute="bottom" constant="20" id="W7I-t7-XeS"/>
+                            <constraint firstItem="vH3-xw-jbv" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="X36-Qa-NgZ"/>
+                            <constraint firstItem="9S1-ci-wIr" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="XsE-ot-Yer"/>
+                            <constraint firstItem="nYW-vV-fQ3" firstAttribute="top" secondItem="WW8-6J-npK" secondAttribute="bottom" id="ZpG-Xw-M9H"/>
+                            <constraint firstItem="gwS-8i-YcF" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="cNT-gW-ZaO"/>
+                            <constraint firstItem="jCC-gg-3VG" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="dlU-t2-6HW"/>
+                            <constraint firstItem="D1r-MV-mGr" firstAttribute="centerY" secondItem="WWd-qR-Nzf" secondAttribute="centerY" id="eD5-6e-IQG"/>
+                            <constraint firstItem="1ga-mq-YIV" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="eyc-IP-NC7"/>
+                            <constraint firstItem="WWd-qR-Nzf" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="hLm-LN-rKR"/>
+                            <constraint firstItem="OVj-xr-hFj" firstAttribute="top" secondItem="vH3-xw-jbv" secondAttribute="bottom" id="hub-dI-kM7"/>
+                            <constraint firstItem="vH3-xw-jbv" firstAttribute="top" secondItem="ptR-Ft-Gz8" secondAttribute="bottom" constant="10" id="imQ-yr-kZH"/>
+                            <constraint firstItem="uqi-bn-tjI" firstAttribute="top" secondItem="GHK-gZ-yY2" secondAttribute="bottom" id="kno-7j-4Nv"/>
+                            <constraint firstItem="zUo-Eb-gsE" firstAttribute="leading" secondItem="S8U-Bl-X5W" secondAttribute="leading" constant="10" id="kqU-jh-Fbz"/>
+                            <constraint firstItem="xgQ-P5-gRY" firstAttribute="top" secondItem="ptR-Ft-Gz8" secondAttribute="bottom" constant="-21" id="ow5-XZ-yNP"/>
+                            <constraint firstItem="kRF-Qm-Dsg" firstAttribute="top" secondItem="nYW-vV-fQ3" secondAttribute="bottom" id="rth-AC-yhs"/>
+                            <constraint firstItem="WW8-6J-npK" firstAttribute="top" secondItem="OVj-xr-hFj" secondAttribute="bottom" id="s9g-K0-BKD"/>
+                            <constraint firstItem="RdR-Wq-29y" firstAttribute="top" secondItem="9S1-ci-wIr" secondAttribute="bottom" id="sSc-KO-va9"/>
+                            <constraint firstItem="D1r-MV-mGr" firstAttribute="leading" secondItem="WWd-qR-Nzf" secondAttribute="trailing" constant="13" id="v4d-lh-p8p"/>
+                            <constraint firstItem="gwS-8i-YcF" firstAttribute="top" secondItem="V3t-v3-sjM" secondAttribute="bottom" id="yf9-wj-sNg"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="textField" destination="1ga-mq-YIV" id="39N-KK-HDo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P2R-Bs-Rxw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13" y="315"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="seattle_city.jpg" width="1920" height="1481"/>
+    </resources>
+</document>
