@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ASGlobalOverlay"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "A modern pop-over controller thats easy to implement."
   s.description      = <<-DESC
 
